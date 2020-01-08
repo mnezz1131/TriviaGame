@@ -1,23 +1,53 @@
-.container {
-    text-align: center;
+body{
+    background-image: url(../Images/le-lespauls.jpg);
 }
 
-label {
-    display: block;
-    }
-    
-    input {
-    width: 30px;
-    margin-left: 20px;
-    }
-    
-    h2 {
-    clear: both;
-    padding-top: 20px;
-    }
-    
-    button {
-    width: 100px;
+.container {
+   text-align: center;
+   
+}
+.jumbotron{
     margin-top: 20px;
-    }
+    background-image: url(../Images/LSSRP8Z\ \(1\)\ \(1150x719\).jpg);
     
+}    
+
+.display-4{
+    font-family: 'Metal Mania', cursive;
+    font-size: 100px;
+    text-shadow:
+		-1px -1px 0 #BCC6CC,
+		1px -1px 0 #BCC6CC,
+		-1px 1px 0 #BCC6CC,
+		1px 1px 0 #BCC6CC;
+}
+h2{
+    font-size: 50px;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+.timer{
+    font-size: 50px;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    color: rgb(249, 251, 252);
+    font-family: 'Metal Mania', cursive;
+}
+.answers{
+    font-size: 27px;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    color: #BCC6CC;
+}
+

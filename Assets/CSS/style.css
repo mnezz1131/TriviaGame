@@ -2,17 +2,20 @@ body{
     background-image: url(../Images/le-lespauls.jpg);
 }
 
-.container {
-   text-align: center;
-   
-}
-.jumbotron{
+
+#wrapper{
     margin-top: 20px;
     background-image: url(../Images/LSSRP8Z\ \(1\)\ \(1150x719\).jpg);
+    width: 1100px;
+    height: 640px;
+    margin: 0 auto;
     
-}    
+}
 
-.display-4{
+
+h1{
+text-align: center;
+    color: #000;
     font-family: 'Metal Mania', cursive;
     font-size: 100px;
     text-shadow:
@@ -21,33 +24,80 @@ body{
 		-1px 1px 0 #BCC6CC,
 		1px 1px 0 #BCC6CC;
 }
-h2{
-    font-size: 50px;
-    text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
-    color:white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-}
-.timer{
-    font-size: 50px;
-    text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
-    color: rgb(249, 251, 252);
-    font-family: 'Metal Mania', cursive;
-}
-.answers{
-    font-size: 27px;
-    text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
-    color: #BCC6CC;
+
+#subwrapper{
+text-align: center;
 }
 
+#start{
+    font-family: 'Metal Mania', cursive;
+    font-size: 50px;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    color: red;
+    margin: auto 0;
+   
+}
+ .answer-button{
+    
+        display: inline-block;
+        padding: 15px 25px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #000;
+        background-color: silver;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        margin-right: 10px;
+        
+
+      }
+      
+#counter{
+    text-align: center;
+    color: #000;
+    font-family: 'Metal Mania', cursive;
+    font-size: 100px;
+    text-shadow:
+		-1px -1px 0 #BCC6CC,
+		1px -1px 0 #BCC6CC,
+		-1px 1px 0 #BCC6CC,
+		1px 1px 0 #BCC6CC;
+
+}     
+ 
+h2{
+    text-align: center;
+    color: #000;
+    font-family: 'Metal Mania', cursive;
+    font-size: 45px;
+    text-shadow:
+		-1px -1px 0 #BCC6CC,
+		1px -1px 0 #BCC6CC,
+		-1px 1px 0 #BCC6CC,
+		1px 1px 0 #BCC6CC;
+}
+h3{
+    text-align: center;
+    color: #000;
+    font-family: 'Metal Mania', cursive;
+    font-size: 45px;
+    text-shadow:
+		-1px -1px 0 #BCC6CC,
+		1px -1px 0 #BCC6CC,
+		-1px 1px 0 #BCC6CC,
+		1px 1px 0 #BCC6CC;
+}
+
+
+      
+
+
+ 

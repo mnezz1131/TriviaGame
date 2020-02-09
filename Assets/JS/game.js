@@ -1,20 +1,23 @@
 //Jquery function
 $(document).ready(function () {
     console.log("ready!");
-});
+var answerButton;
 
 // Function that uses Jquery to remove the Start button when clicked from the beginning of the game
-
 $("#start").on('click', function () {
     $("#start").remove();
     //runs the load questions funciton
     game.loadQuestion();
 })
 
+//Need to go to the doucment for the click
 $(document).on('click', ".answer-button", function (e) {
     game.clicked(e);
 })
-
+$(document).on("click", "#reset", function(){
+console.log("WTF")
+    game.reset();
+});
 
 //Array of objects for the questions in the game==============================================================================
 var questions = [
@@ -39,7 +42,7 @@ var questions = [
         correctAnswer: "The Monkees"
     },
     {
-        questions: "Top hatted Guitar Hero Slash auditioned for which band before finding success with Guns N Roses?",
+        questions: "Slash auditioned for which band before finding success with Guns N Roses?",
         answers: ["Slaughter", "Warrant", "Poison", "Def Leppard"],
         correctAnswer: "Poison",
     },
@@ -64,9 +67,9 @@ var questions = [
         correctAnswer: "Tony Iommi",
     },
     {
-        questions: "What singer has played with Michael Schenker, Ritchie Blackmore, Steve Vai, Yngwie Malsteen?",
-        answers: ["Robert Plant", "David Lee Roth", "Graham Bonnett", "Alice Cooper"],
-        correctAnswer: "Graham Bonnett",
+        questions: "What was Steve Vai's first band?",
+        answers: ["Whitesnake", "David Lee Roth", "Alcatrazz", "Frank Zappa"],
+        correctAnswer: "Frank Zappa",
     },
 ];
 
@@ -83,7 +86,7 @@ var game = {
     countdown: function () {
         game.counter--;
         $("#counter").html(game.counter);
-        if (game.counter <= 0) {
+        if (game.counter === 0) {
             console.log("TIMES UP");
             game.timeup();
         }
@@ -93,23 +96,27 @@ var game = {
     loadQuestion: function () {
         //Sets the timer -every second lowers counter
         timer = setInterval(game.countdown, 1000);
-        
+
+        console.log("This is the Game countdown " + game.countdown);
+        console.log(timer);
         //Posts the current question to the page
         $("#subwrapper").html("<h2 id = 'counter'>15</h2>");
         $("#subwrapper").append("<h2>" + questions[game.currentQuestion].questions + "</h2>");
         //Posts all of the answers to the page
         //loop for the array
+       
         for (var i = 0; i < questions[game.currentQuestion].answers.length; i++) {
             var answerButton = $("<button>");
             answerButton.addClass("answer-button");
             answerButton.attr("id", "button-" + i);
             answerButton.data("name", questions[game.currentQuestion].answers[i]);
             answerButton.text(questions[game.currentQuestion].answers[i]);
-            
+            $("#subwrapper1").append(answerButton)
         }
         },
 
         nextQuestion: function() {
+            $("#subwrapper1").empty();
             game.counter = 15;
             $("#counter").html(game.counter);
             game.currentQuestion++;
@@ -127,6 +134,7 @@ var game = {
             }
         },
         results: function() {
+            $("#subwrapper1").empty();
             clearInterval(timer);
             $("#subwrapper").html('<h2> ALL DONE </h2> ');
             $("#subwrapper").append('<h3> Correct: '+ game.correct + '</h3');
@@ -167,12 +175,16 @@ var game = {
             }
         },
         reset: function() {
+            console.log("we are in reset button")
             game.currentQuestion =0;
             game.counter  =0;
             game.correct  =0; 
             game.incorrect =0; 
             game.unanswered =0;
-            clearInterval(timer);
-            game.loadQuestion();
+           //clearInterval(timer);
+           game.counter = 15;
+           game.loadQuestion();
+          
         },
     }
+});
